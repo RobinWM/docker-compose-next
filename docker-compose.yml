@@ -16,8 +16,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.next.rule=Host(`next-app.allinaigc.org`)
-      - traefik.http.routers.next.entrypoints=websecure
-      - traefik.http.routers.next.tls.certResolver=letsencrypt
+      - traefik.http.routers.next.entrypoints=web
       - traefik.http.services.next.loadbalancer.server.port=3000
   # Add more containers below (nginx, postgres, etc.)
 # Define a network, which allows containers to communicate
